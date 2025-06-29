@@ -29,6 +29,9 @@ jobs:
         with:
            cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
 
+      - name: change dir
+        run: cd project-1
+
       # Runs a single command using the runners shell
       - name: Run Terraform init
         run: terraform init
